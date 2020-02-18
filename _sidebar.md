@@ -1,4 +1,5 @@
 
+<!-- [HTML](/) -->
 * HTML
 
 * CSS
@@ -12,6 +13,10 @@
 * Node
 
 * 数据库
+
+* 服务端相关
+  * ssr
+  * nginx
 
 * 打包工具
   * webpack
