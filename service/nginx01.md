@@ -15,7 +15,7 @@ nginx 是一款是由俄罗斯的程序设计师 Igor Sysoev 所开发高性能�
   - Gzip 压缩配置
   - 适配pc和移动端
   - 配置https
-  - 缓存服务
+  - 缓存服务（proxy_cache）
 
 ## 安装和启动
 > 我的操作系统：macOS Mojave 10.14，直接用 brew 安装
@@ -50,7 +50,7 @@ sudo nginx -s quit　　　　// 完整有序的停止nginx/优雅关闭（先�
 　sudo nginx -t　　　　　// 检查配置文件的正确性    
 
 4、其他停止 nginx 服务方法  
-ps -ef|grep nginx　　　　　// 查看 nginx 进程  
+ps -ef|grep nginx　　　　　// 查看 nginx 进程
 sudo kill -QUIT [进程号]　　// 从容停止  
 sudo kill -TERM [进程号]　　// 快速停止  
 sudo pkill -9 nginx　　　　// 强制停止  
