@@ -14,11 +14,12 @@
 * React
   * [react原理解析](/react/reactAnalysis.md)
   * [从redux到react-redux再到dva](/react/reduxFlows.md)
-  * [HOC]()
+  * [HOC](/react/hoc.md)
   * [hooks]()
 
 * Node
   * [浑仪系统后端技术栈回顾总结](/node/hyxt.md)
+  * [koa2](/node/koa2.md)
 
 * 数据库
 
@@ -37,6 +38,7 @@
   * rollup
   * [前端项目启动本地服务器的几种方法](/工程化/devServer.md)
   * [实现本地mock数据的几种方法](/工程化/mock.md)
+  * [开源一个 npm 包组件](/工程化/npmComp.md)
 
 * Git
   * [git使用规范](/git/useStandard.md)
@@ -62,6 +64,7 @@
 
 * 计算机网络基础
   * [tcp三次握手四次挥手]()
+  * [软件版本号扫盲](/networkBase/version.md)
 
 * 算法
 

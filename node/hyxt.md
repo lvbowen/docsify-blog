@@ -30,8 +30,10 @@ npm i -S egg-sequelize mysql2   // dependencies
 npm i -D sequelize-cli    // devDependencies
 ```
   - egg-sequelize: 辅助我们将定义好的 Model 对象加载到 app 和 ctx 上
-  - mysql2: 
+  - mysql2: node 程序下的 mysql 驱动 （如果没使用 sequelize 而是直接用的 egg-mysql，则不需要这个模块 ）
   - sequelize-cli: 实现 [Migrations(迁移)](https://segmentfault.com/a/1190000011583608)，方便我们对数据库数据结构做变更
+
+过程：node app --> sequelize(ORM) --> 驱动（mysql2）--> mysql db
 
 **1、新建 .sequelizerc 配置文件**  
 在 egg 项目中，我们希望将所有数据库 Migrations 相关的内容都放在 database 目录下，所以我们在项目根目录下新建一个 .sequelizerc 配置文件：
@@ -105,10 +107,12 @@ npx sequelize migration:generate --name=init-user
 ```
 执行完后会在 database/migrations 目录下生成一个 migration 文件(${timestamp}-init-user.js)，我们修改它来处理初始化 user 表。
 
-**5、执行 migrate 进行数据库变更**
+**5、执行 migrate 进行数据库变更**  
+数据持久化
 ```
 # 升级数据库
-npx sequelize db:migrate
+npx sequelize db:migrate  # 不指定 env， 默认取 development 的配置
+# npx sequelize db:migrate --env=production  取 production 的配置
 # 如果有问题需要回滚，可以通过 `db:migrate:undo` 回退一个变更
 # npx sequelize db:migrate:undo
 # 可以通过 `db:migrate:undo:all` 回退到初始状态
@@ -414,6 +418,7 @@ alicloudLog: {
 # 设置基础镜像,如果本地没有该镜像，会从Docker.io服务器pull镜像
 FROM node:12.3-alpine
 
+#项目维护者
 MAINTAINER cjjcsu
 
 # 设置时区和创建 app 目录
@@ -447,4 +452,23 @@ EXPOSE 8010
 CMD sh -c 'NODE_ENV=production npx sequelize db:migrate && npm start'
 
 ```
-"sh -c" 命令，它可以让 bash 将一个字串作为完整的命令来执行。
+"sh -c" 命令，它可以让 bash 将一个字串作为完整的命令来执行。  
+
+服务端执行构建并打 tag（公司走的 jenkins）：  
+```
+# 根据 Dockerfile 文件的配置进行构建，‘.’ 必须要，‘-f Dockerfile’ 表示以哪个文件构建，不指定的话默认 Dockerfile
+docker build -t docker-image.cai-inc.com/app-prod-ready/front-guardians:280 . -f Dockerfile
+```
+docker-image.cai-inc.com/app-prod-ready/front-guardians:280 各含义：
+  - docker-image.cai-inc.com： 私有仓库域名
+  - app-prod-ready：项目名称
+  - front-guardians：镜像名称
+  - 280：镜像版本号
+
+镜像推送到 docker hub：
+```
+docker push docker-image.cai-inc.com/app-prod-ready/front-guardians:280
+```
+
+## 扩展阅读
+  - [前端工程实践之数据埋点分析系统](https://juejin.im/post/5e3fb599f265da573f3563b9)

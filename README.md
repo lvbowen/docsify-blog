@@ -7,3 +7,7 @@ github pages: [https://lvbowen.github.io/docsify-blog/#/](https://lvbowen.github
 docsify: [https://docsify.js.org/#/](https://docsify.js.org/#/)
 
   <!-- 注释用这种符号，同注释 html -->
+  <!--
+    # 本地开发启动
+    docsify serve
+  -->
