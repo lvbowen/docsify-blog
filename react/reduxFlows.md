@@ -223,7 +223,7 @@ ReactDOM.render(
 完整代码看[这里](https://github.com/lvbowen/simplest-redux-example/blob/master/react-redux.js)
 
 ## dva
-[dva](https://dvajs.com/guide/) 首先是一个基于 redux 和 redux-saga 的数据流方案，如果使用 dva 框架开发，可以更方便的使用 redux 功能，提高开发效率，推荐使用哦。  
+[dva](https://dvajs.com/guide/) 首先是一个基于 redux 和 [redux-saga](https://redux-saga-in-chinese.js.org/) 的数据流方案，如果使用 dva 框架开发，可以更方便的使用 redux 功能，提高开发效率，推荐使用哦。  
 
 修改 state 的逻辑都会放在 models 下 (定义model)：
 ```js
@@ -233,6 +233,7 @@ export default {
   state: {
     count: 0,
   },
+  // 副作用，底层是引入了 redux-saga 做异步流程控制
   effects: {
     *addAfter1Second({ payload }, { call, put }) {
       yield call(delay, payload); // delay 可以是个异步操作，payload 是组件传过来的 { id: 123 }
@@ -247,7 +248,18 @@ export default {
       }
     },
   },
-
+  // 订阅
+  subscriptions: {
+    set({ history }) {
+      // 监听 history 变化
+      return history.listen((res) => {
+        console.log(res);
+        if (window._dgt) {
+          window._dgt.push(["track_SPA_view"]);
+        }
+      });
+    }
+  }
 };
 ```
 
