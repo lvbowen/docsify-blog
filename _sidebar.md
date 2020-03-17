@@ -11,11 +11,12 @@
 * Vue
   * [vue源码分析](/vue/vueAnalysis.md)
 
-* React
+* [**React**](/react/index.md)
   * [react原理解析](/react/reactAnalysis.md)
   * [从redux到react-redux再到dva](/react/reduxFlows.md)
   * [HOC](/react/hoc.md)
   * [hooks]()
+  * [合成事件](/react/composeEvent.md)
 
 * Node
   * [浑仪系统后端技术栈回顾总结](/node/hyxt.md)
@@ -30,8 +31,10 @@
 
 * 工程化
   * webpack
-    * [Webpack编译流程的简单实现](/工程化/webpackCompilerRealize.md)
+    * [构建配置](/工程化/config.md)
     * [webpack常用插件](/工程化/webpackCommonUsePlugin.md)
+    * [webpack性能优化](/工程化/performanceOptimize.md)
+    * [Webpack编译流程的简单实现](/工程化/webpackCompilerRealize.md)
   * babel
     * [babelrc文件简单分析](/工程化/babelrc.md)
     * [babel工作原理](/工程化/babelPrinciple.md)
@@ -47,7 +50,7 @@
 * 性能优化
 
 * 前端架构
-  * 业务分析之登录态
+  * [业务分析之登录态](/前端架构/loginStatus.md)
   * 业务分析之图片上传
   * [业务分析之文件流下载](/前端架构/businessFileDown.md)
   * 微前端
@@ -61,6 +64,7 @@
 
 * CI/CD
   * [docker](/cicd/docker.md)
+  * [k8s](/cicd/k8s.md)
 
 * 计算机网络基础
   * [tcp三次握手四次挥手]()
