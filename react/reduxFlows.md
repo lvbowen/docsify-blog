@@ -291,6 +291,7 @@ export default class Counter extends Component {
 ![dva](../static/img/dva.png)
 
 ## 扩展阅读
+  - [Redux 中文文档](https://www.redux.org.cn/)
   - [Redux](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html)
   - [React-Redux](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_three_react-redux.html)
 
