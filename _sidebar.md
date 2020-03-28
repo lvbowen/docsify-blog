@@ -10,6 +10,7 @@
 
 * Vue
   * [vue源码分析](/vue/vueAnalysis.md)
+  * [vue3新特性](/vue/vue3.md)
 
 * [**React**](/react/index.md)
   * [react原理解析](/react/reactAnalysis.md)
@@ -53,6 +54,7 @@
   * [业务分析之登录态](/前端架构/loginStatus.md)
   * 业务分析之图片上传
   * [业务分析之文件流下载](/前端架构/businessFileDown.md)
+  * [权限控制]()
   * 微前端
   * [工具网址](/前端架构/utilSites.md)
 
