@@ -5,6 +5,7 @@
 * CSS
 
 * JavaScript
+  * [promise](/js/promise.md)
 
 * TypeScript
 
@@ -16,7 +17,7 @@
   * [react原理解析](/react/reactAnalysis.md)
   * [从redux到react-redux再到dva](/react/reduxFlows.md)
   * [HOC](/react/hoc.md)
-  * [hooks]()
+  * [hooks](/react/hook.md)
   * [合成事件](/react/composeEvent.md)
 
 * Node

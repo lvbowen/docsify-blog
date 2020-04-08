@@ -1,4 +1,4 @@
-# hook
+# hooks
 
 ## hook 规则
 Hook 本质就是 JavaScript 函数，但是在使用它时需要遵循两条规则。  
