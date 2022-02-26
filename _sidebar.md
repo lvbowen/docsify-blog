@@ -23,6 +23,7 @@
 * Node
   * [浑仪系统后端技术栈回顾总结](/node/hyxt.md)
   * [koa2](/node/koa2.md)
+  * [node 常用模块](/node/modules.md)
 
 * 数据库
 
