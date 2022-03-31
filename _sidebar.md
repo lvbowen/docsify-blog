@@ -60,6 +60,9 @@
   * 微前端
   * [工具网址](/前端架构/utilSites.md)
 
+* 基建
+  * [基于 dumi 开发业务组件库](/基建/业务组件库.md)
+
 * CLI
   * [自定义cli](/cli/custom.md)
   * vim
