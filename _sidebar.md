@@ -55,7 +55,7 @@
   * [业务分析之登录态](/前端架构/loginStatus.md)
   * 业务分析之图片上传
   * [业务分析之文件流下载](/前端架构/businessFileDown.md)
-  * [权限控制]()
+  * [权限管理](/前端架构/permissionManage.md)
   * 微前端
   * [工具网址](/前端架构/utilSites.md)
 
