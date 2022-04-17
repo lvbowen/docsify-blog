@@ -28,8 +28,11 @@
 
 * 服务端相关
   * ssr
-  * [nginx安装和启动](/service/nginx01.md)
-  * [nginx常用功能](/service/nginx02.md)
+  * nginx
+    * [nginx安装和启动](/service/nginx01.md)
+    * [nginx常用功能](/service/nginx02.md)
+    * [记一次 502 问题](/service/nginx502.md)
+  
 
 * 工程化
   * webpack
@@ -59,6 +62,10 @@
   * 微前端
   * [工具网址](/前端架构/utilSites.md)
 
+* 项目复盘
+  * [广东河长管理系统](/项目复盘/广东河长管理系统.md)
+  * [无锡智慧河湖大屏](/项目复盘/无锡智慧河湖大屏.md)
+  
 * 基建
   * [基于 dumi 开发业务组件库](/基建/业务组件库.md)
 
