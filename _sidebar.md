@@ -31,7 +31,7 @@
   * nginx
     * [nginx安装和启动](/service/nginx01.md)
     * [nginx常用功能](/service/nginx02.md)
-    * [记一次 502 问题](/service/nginx502.md)
+    * [记一次踩坑 502 问题](/service/nginx502.md)
   
 
 * 工程化
