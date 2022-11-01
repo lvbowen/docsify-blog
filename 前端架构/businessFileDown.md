@@ -22,6 +22,7 @@ request('/api/exportExcel', {
   },
   responseType: 'blob',
 }).then((res) => {
+// 通过这个 downloadjs 包也可以
   const blob = new Blob([res], { type: res.type });
   const elink = document.createElement('a');
   const href = window.URL.createObjectURL(blob);
